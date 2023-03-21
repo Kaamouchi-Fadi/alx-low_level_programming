@@ -1,17 +1,19 @@
+#include <limits.h>
+#include "main.h"
+
 /**
-*main - Prints all single digit numbers of base 10 starting from 0.
-*
-*Return: Always 0.
-*/
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-int i;
+	int r;
 
-for (i = 0; i < 10; i++)
-{
-putchar(i + '0');
-}
-putchar('\n');
-
-return (0);
+	r = print_sign(98);
+	if (r < 0)
+		r *= -1;
+	_putchar(r + '0');
+	_putchar('\n');
+	return (0);
 }
