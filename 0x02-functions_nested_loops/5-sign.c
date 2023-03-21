@@ -1,33 +1,17 @@
-#include "main.h"
-
 /**
- * main - check the code.
- *
- * Return: Always 0.
- */
+*main - Prints all single digit numbers of base 10 starting from 0.
+*
+*Return: Always 0.
+*/
 int main(void)
 {
-    int r;
+int i;
 
-    r = print_sign(98);
-    _putchar(',');
-    _putchar(' ');
-    _putchar(r + '0');
-    _putchar('\n');
-    r = print_sign(0);
-    _putchar(',');
-    _putchar(' ');
-    _putchar(r + '0');
-    _putchar('\n');
-    r = print_sign(0xff);
-    _putchar(',');
-    _putchar(' ');
-    _putchar(r + '0');
-    _putchar('\n');
-    r = print_sign(-1);
-    _putchar(',');
-    _putchar(' ');
-    _putchar(r + '0');
-    _putchar('\n');
-    return (0);
+for (i = 0; i < 10; i++)
+{
+putchar(i + '0');
+}
+putchar('\n');
+
+return (0);
 }
