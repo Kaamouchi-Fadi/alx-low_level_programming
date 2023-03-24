@@ -16,19 +16,3 @@ int main(void)
     printf("%c: %d\n", c, _isdigit(c));
     return (0);
 }
-
-
-2-mul.c
-
-#include "main.h"
-/**
- * mul - multiply 2 int
- * @a: first int
- * @b: second int
- * Return: addition of the multiplicattion
- */
-
-int mul(int a, int b)
-{
-	return (a * b);
-}
