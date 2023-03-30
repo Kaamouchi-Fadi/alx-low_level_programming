@@ -1,3 +1,1 @@
-Readme for this Projects.
-Pointers array and strings.
-Various task completed
+Pointers array and strings tasks.
