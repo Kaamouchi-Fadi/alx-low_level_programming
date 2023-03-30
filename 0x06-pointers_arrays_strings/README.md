@@ -1,4 +1,4 @@
-0x06. C - More pointers, arrays and strings
+C - More pointers, arrays and strings
 
 1. strncat
 Write a function that concatenates two strings
