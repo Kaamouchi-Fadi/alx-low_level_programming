@@ -1,1 +1,41 @@
-ELF
+#!/bin/bash
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+
+int check_password(const char *password) {
+    const uint32_t correct_password_number = 0x46c6f48;
+    size_t password_length = strlen(password);
+
+    if (password_length == 4) {
+        for (size_t i = 0; i < 4; i++) {
+            uint8_t correct_byte = (uint8_t)((correct_password_number >> (i * 8)) & 0xff);
+            if ((uint8_t)password[i] != correct_byte) {
+                return 0;
+            }
+        }
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main(int argc, char *argv[]) {
+    int result;
+
+    if (argc == 2) {
+        int is_correct = check_password(argv[1]);
+        if (is_correct) {
+            puts("Congratulations!");
+            result = 0;
+        } else {
+            puts("ko");
+            result = 1;
+        }
+    } else {
+        fprintf(stderr, "Usage: %s password\n", argv[0]);
+        result = 1;
+    }
+
+    return result;
+}
